@@ -1,0 +1,429 @@
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Web Design Mastery | WDM&Co</title>
+      <link rel="shortcut icon" type="image/x-icon" href="images/logo_nyo-removebg-preview.png">
+      <style>
+         @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+         :root {
+         --primary-color: #2c3855;
+         --primary-color-dark: #435681;
+         --text-dark: #333333;
+         --text-light: #fffffe;
+         --extra-light: #f3f4f6;
+         --white: #ffffff;
+         --max-width: 1550px;
+         }
+         * {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+         }
+         .section__container {
+         max-width: var(--max-width);
+         margin: auto;
+         padding: 5rem 1rem;
+         }
+         .section__header {
+         font-size: 2rem;
+         font-weight: 600;
+         color: #f3f3f3;
+         text-align: center;
+
+         }
+         a {
+         text-decoration: none;
+         }
+         img {
+         width: 100%;
+         display: flex;
+         }
+         body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #AD795B, #C49092);
+    padding: 5px; /* Adjust the value as needed */
+    margin-bottom: auto;
+    background-image: url(images/BGBG.png);
+    background-repeat: no-repeat; /* Prevent background image from repeating */
+    background-size: 100% 55%; /* Set background size to cover width and adjust height */
+    height: 100vh; /* Set the height to full viewport height */
+    width: 100%; /* Set the width to 100% of the viewport */
+    background-color: #AD795B;
+}
+
+
+
+
+         nav {
+         max-width: var(--max-width);
+         margin: auto;
+         padding: 2rem 1rem;
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         color: #d4d4d4;
+         }
+         .nav__logo {
+         font-size: 1.5rem;
+         font-weight: 600;
+         color: var(--text-dark);
+         color: #ffffff;
+         }
+         .nav__logo img {
+          display: block;
+          max-width: 28%;
+          height: auto;
+         }
+         .nav__links {
+         list-style: none;
+         display: flex;
+         align-items: center;
+         gap: 2rem;
+         }
+         .link a {
+         font-weight: 500;
+         color: var(--text-light);
+         transition: 0.3s;
+         }
+         .link a:hover {
+         color: var(--primary-color);
+         }
+         .header__container {
+         padding: 1rem 1rem 5rem 1rem;
+         }
+         @keyframes typing {
+         from { width: 0; }
+         to { width: 100%; }
+         }
+         /* Apply typing effect to text elements */
+         .header__content h1,
+         .header__content p {
+         overflow: hidden; /* Prevent text from showing initially */
+         white-space: nowrap; /* Prevent text from wrapping */
+         border-right: 0 solid var(--white); /* Start with width 0 */
+         animation: typing 3s steps(50, end) forwards; /* Typing animation without blinking cursor */
+         }
+         /* CSS styles */
+         .header__image__container {
+    position: relative;
+    min-height: 500px;
+    background-image: linear-gradient(to right, rgba(195, 130, 26, 0.1),#AD795B ), url("images/metatry.png");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 2rem;
+    padding: 10px;
+    box-shadow: 0 0 10px 1px rgb(247, 147, 31); /* This adds a black shadow */
+}
+
+         .header__content {
+         max-width: 600px;
+         padding: 5rem 2rem;
+         }
+         .header__content h1 {
+         margin-bottom: 1rem;
+         font-size: 3.5rem;
+         line-height: 4rem;
+         font-weight: 600;
+         color: var(--white);
+         }
+         .header__content p {
+         color: var(--extra-light);
+         }
+         .section__container {
+         max-width: var(--max-width);
+         margin: auto;
+         padding: 5rem 1rem;
+         }
+         .popular__grid {
+         margin-top: 4rem;
+         display: grid;
+         grid-template-columns: repeat(3, 1fr);
+         gap: 2rem;
+         }
+         .popular__card {
+         overflow: hidden;
+         border-radius: 1rem;
+         box-shadow: 1px 1px 1px rgba(199, 5, 5, 0.1);
+         background-color: rgb(247, 147, 31);
+         color: black;
+         opacity: 0; /* Initially hide the cards */
+         animation: fadeIn 1s ease forwards; /* Apply fade in animation */
+         transition: box-shadow 0.3s ease; /* Add transition for smooth effect */
+         padding: 1rem; /* Added padding to match .popular__content */
+         }
+         .popular__content {
+         padding: 1rem; /* Adjusted padding to match .popular__card */
+         }
+         .popular__card__header {
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         gap: 1rem;
+         margin-bottom: 0.5rem;
+         }
+         .popular__card__header h4 {
+         font-size: 1.2rem;
+         font-weight: 600;
+         color: rgb(238, 238, 238);
+         text-align: center;
+         }
+         .popular__content p {
+         color: black;
+         }
+         .popular__card:hover {
+         box-shadow: 0 0 30px rgba(242, 239, 239, 0.5); /* Add glow effect on hover */
+         }
+         /* Define the fadeIn animation */
+         @keyframes fadeIn {
+         from {
+         opacity: 0;
+         transform: translateY(20px); /* Optional: Add a slight upward motion */
+         }
+         to {
+         opacity: 1;
+         transform: translateY(0);
+         }
+         }
+         .nav__links {
+    display: flex;
+    position: absolute; /* or relative or fixed, depending on your layout */
+    top: 70px; /* adjust as needed */
+    left: 73%; /* adjust as needed */
+    transform: translateX(-50%); /* to horizontally center */
+    color: black;
+}
+         .nav__links a {
+         color: var(--text-color);
+         font-size: 1.1rem;
+         padding: 10px 20px;
+         font-weight: 500;
+         }
+         .nav__links a:hover {
+         color: #7FC7D9;
+         transition: 0.4s;
+         }
+       
+
+
+         
+         /* Style for the contact section */
+         .contact {
+         background-color: #f4f4f4;
+         padding: 50px 0;
+         text-align: center;
+         }
+         .contact h4 {
+         margin-bottom: 20px;
+         color: #333;
+         }
+         .contact ul {
+         list-style: none;
+         padding: 0;
+         }
+         .contact ul li {
+         display: inline-block;
+         margin-right: 10px;
+         }
+         .contact ul li:last-child {
+         margin-right: 0;
+         }
+         .contact ul li a {
+         color: #333;
+         text-decoration: none;
+         font-size: 18px;
+         transition: color 0.3s ease;
+         }
+         .contact ul li a:hover {
+         color: #007bff;
+         }
+         .video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh; /* Adjust as needed */
+    
+}
+
+.video {
+    margin-bottom: 10px; /* Adjust as needed */
+}
+
+
+      </style>
+   </head>
+   <body>
+      <nav>
+         <div class="nav__logo">
+            <img src="images/logo_nyo-removebg-preview.png" alt="Theak WoodWorks Logo">
+        </div>
+        
+         <ul class="nav__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Product.html">Product</a></li>
+            <li><a href="Services.html">Services</a></li>
+            <li><a href="about.html">About Us</a></li>
+         </ul>
+      </nav>
+      <section id="Steps">
+        <section class="section__container popular__container">
+           <div class="popular__grid">
+              <div class="popular__card">
+                 <img src="images/step1.jpeg" alt="popular" />
+                 <div class="popular__content">
+                    <div class="popular__card__header">
+                       <h4>STEP 1</h4>
+                    </div>
+                    <p>First we draw and lay out the 
+                        product in cardboard into left and right side 14cm and thickness is 2cm.
+                        </p>
+                 </div>
+              </div>
+              <div class="popular__card">
+                 <img src="images/STEP2.jpeg" alt="popular" />
+                 <div class="popular__content">
+                    <div class="popular__card__header">
+                       <h4>STEP 2</h4>
+                    </div>
+                    <p>In the second step we cut the cardboard into left and right side of our lay out product.</p>
+                 </div>
+              </div>
+              <div class="popular__card">
+                 <img src="images/STEP3.jpeg" alt="popular" />
+                 <div class="popular__content">
+                    <div class="popular__card__header">
+                       <h4>STEP 3</h4>
+                    </div>
+                    <p>In third step the molded design is superimposed on the wood to form the product.</p>
+                 </div>
+              </div>
+           </div>
+        </section>
+        <section id="Steps">
+            <section class="section__container popular__container">
+               <div class="popular__grid">
+                  <div class="popular__card">
+                     <img src="images/STEP4.jpeg" alt="popular" />
+                     <div class="popular__content">
+                        <div class="popular__card__header">
+                           <h4>STEP 4</h4>
+                        </div>
+                        <p>In fourth step after we molded the design into wood, we started sawing the product.</p>
+                     </div>
+                  </div>
+                  <div class="popular__card">
+                     <img src="images/STEP5.jpeg" alt="popular" />
+                     <div class="popular__content">
+                        <div class="popular__card__header">
+                           <h4>STEP 5</h4>
+                        </div>
+                        <p>In the fifth step the two part wooden carved design already sawn, we started carving the middle part of it.</p>
+                     </div>
+                  </div>
+                  <div class="popular__card">
+                     <img src="images/STEP6.jpeg" alt="popular" />
+                     <div class="popular__content">
+                        <div class="popular__card__header">
+                           <h4>STEP 6</h4>
+                        </div>
+                        <p>In the sixth step the left part of design, we polish the product (niliha).</p>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <section id="Steps">
+                <section class="section__container popular__container">
+                   <div class="popular__grid">
+                      <div class="popular__card">
+                         <img src="images/STEP7.jpeg" alt="popular" />
+                         <div class="popular__content">
+                            <div class="popular__card__header">
+                               <h4>STEP 7</h4>
+                            </div>
+                            <p>In the seventh step the right part of design, we polish product (niliha).</p>
+                         </div>
+                      </div>
+                      <div class="popular__card">
+                         <img src="images/STEP8.jpeg" alt="popular" />
+                         <div class="popular__content">
+                            <div class="popular__card__header">
+                               <h4>STEP8</h4>
+                            </div>
+                            <p>In the eight step all the carved designs that were sawn were started to be knocked down we use more nails and the remaining wood was made into a chair that was 8 by 8 cm, and the table on top of it was 8 by 7cm.</p>
+                         </div>
+                      </div>
+                      <div class="popular__card">
+                         <img src="images/STEP9.jpeg" alt="popular" />
+                         <div class="popular__content">
+                            <div class="popular__card__header">
+                               <h4>STEP 9</h4>
+                            </div>
+                            <p>In the ninth step we polish (o niliha) again the product.</p>
+                         </div>
+                      </div>
+                   </div>
+                </section>
+                <section id="Steps">
+                    <section class="section__container popular__container">
+                       <div class="popular__grid">
+                          <div class="popular__card">
+                             <img src="images/STEP10.jpeg" alt="popular" />
+                             <div class="popular__content">
+                                <div class="popular__card__header">
+                                   <h4>STEP 10</h4>
+                                </div>
+                                <p>In the tenth step with our finished product, we have started to varnish it.</p>
+                             </div>
+                          </div>
+                          <div class="popular__card">
+                             <img src="images/STEP11.jpeg" alt="popular" />
+                             <div class="popular__content">
+                                <div class="popular__card__header">
+                                   <h4>STEP 11</h4>
+                                </div>
+                                <p>In the eleventh step we started the first coating and lastly the third coating of our product.</p>
+                             </div>
+                          </div>
+                          <div class="popular__card">
+                             <img src="images/STEP12.jpeg" alt="popular" />
+                             <div class="popular__content">
+                                <div class="popular__card__header">
+                                   <h4>STEP 12</h4>
+                                </div>
+                                <p>In the twelve step this is our finished product which is called Entranceway Bench.</p>
+                             </div>
+                          </div>
+                       </div>
+                    </section>
+        
+                    <div class="video-container">
+                        <div class="video"></div>
+                        <video controls muted>
+                            <source src="video/trey.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    
+                    
+                    
+      
+      <section class="contact" id="contact" >
+         <div class="footer">
+            <div class="main">
+               <div class="col">
+                  <h4>Contact Us</h4>
+                  <div class="social">
+                     <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Tiktok</a></li>
+                        <li><a href="#">Youtube</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+   </body>
+</html>
